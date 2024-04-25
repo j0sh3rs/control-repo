@@ -7,5 +7,5 @@ class base {
   include base::ntp
   include base::apt
   include limits
-  include sysctl
+  include sysctl::base
 }
