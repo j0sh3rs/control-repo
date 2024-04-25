@@ -17,6 +17,7 @@ apt::sources:
     key:
       name: 'puppetlabs.gpg'
       source: 'https://apt.puppetlabs.com/keyring.gpg'
+      release: 'jammy'
 
 limits::entries:
   'root/nofile':
