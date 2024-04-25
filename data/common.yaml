@@ -22,3 +22,45 @@ apt::sources:
 limits::entries:
   'root/nofile':
     both: unlimited
+
+sysctl::base::values:
+  fs.file-max:
+    value: '1048576000'
+  fs.inotify.max_queued_events:
+    value: '16384'
+  fs.inotify.max_user_instances:
+    value: '512'
+  fs.inotify.max_user_watches:
+    value: '1048576'
+  fs.suid_dumpable:
+    value: '0'
+  kernel.core_pattern:
+    value: '|/bin/false'
+  kernel.keys.root_maxbytes:
+    value: '25000000'
+  kernel.panic:
+    value: '10'
+  kernel.panic_on_oops:
+    value: '1'
+  net.core.bpf_jit_enable:
+    value: '1'
+  net.core.somaxconn:
+    value: '65535'
+  net.ipv4.ip_forward:
+    value: '1'
+  net.ipv4.tcp_conection_control:
+    value: 'bbr'
+  net.ipv4.ip_local_port_range:
+    value: '1024 65000'
+  net.ipv4.tcp_fastopen:
+    value: '3'
+  net.ipv4.tcp_max_tw_buckets:
+    value: '262144'
+  net.ipv4.tcp_mtu_probing:
+    value: '1'
+  vm.max_map_count:
+    value: '262144'
+  vm.overcommit_memory:
+    value: '1'
+  vm.panic_on_oom:
+    value: '0'

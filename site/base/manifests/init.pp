@@ -3,8 +3,8 @@
 # @example Basic Usage
 # include base::limits
 class base {
-  include base::sudoers
+  include sudo
   include base::ntp
   include base::apt
-  include base::limits
+  include limits
 }
