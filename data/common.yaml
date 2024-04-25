@@ -48,8 +48,6 @@ sysctl::base::values:
     value: '65535'
   net.ipv4.ip_forward:
     value: '1'
-  net.ipv4.tcp_conection_control:
-    value: 'bbr'
   net.ipv4.ip_local_port_range:
     value: '1024 65000'
   net.ipv4.tcp_fastopen:
@@ -64,3 +62,5 @@ sysctl::base::values:
     value: '1'
   vm.panic_on_oom:
     value: '0'
+  # net.ipv4.tcp_conection_control:
+  #   value: 'bbr'
