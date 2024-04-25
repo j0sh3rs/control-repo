@@ -12,5 +12,5 @@ mod 'saz-limits', '3.1.0'
 mod 'saz-ssh', '12.0.1'
 mod 'puppet-unattended_upgrades', '8.1.0'
 mod 'thias-sysctl',
-  :git => 'https://github.com/Phil-Friderici/puppet-sysctl/',
+  :git => 'https://github.com/Phil-Friderici/puppet-sysctl',
   :ref => 'pdk'
