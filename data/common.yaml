@@ -1,2 +1,11 @@
 ---
-message: "This node is using common data"
+lookup_options:
+  sudo::configs:
+    merge:
+      strategy: deep
+      merge_hash_arrays: true
+
+sudo::configs:
+  'j0sh3rs':
+    content: 'j0sh3rs ALL=(ALL:ALL) NOPASSWD:ALL'
+    priority: 10
