@@ -1,3 +1,7 @@
+# @summary Base NTP Class
+#
+# @example Basic Usage
+# include base::ntp
 class base::ntp {
   class { 'ntp':
     servers  => ['0.us.pool.ntp.org', '1.us.pool.ntp.org'],

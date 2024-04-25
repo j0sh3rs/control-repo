@@ -9,3 +9,15 @@ sudo::configs:
   'j0sh3rs':
     content: 'j0sh3rs ALL=(ALL:ALL) NOPASSWD:ALL'
     priority: 10
+
+apt::sources:
+  'puppetlabs':
+    location: 'http://apt.puppetlabs.com'
+    repos: 'puppet8'
+    key:
+      name: 'puppetlabs.gpg'
+      source: 'https://apt.puppetlabs.com/keyring.gpg'
+
+limits::entries:
+  'root/nofile':
+    both: unlimited
