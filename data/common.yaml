@@ -46,8 +46,8 @@ sysctl::base::values:
     value: '1'
   net.core.somaxconn:
     value: '65535'
-  net.ipv4.ip_forward:
-    value: '1'
+  # net.ipv4.ip_forward:
+  #   value: '1'
   net.ipv4.ip_local_port_range:
     value: '1024 65000'
   net.ipv4.tcp_fastopen:
@@ -67,6 +67,6 @@ sysctl::base::values:
 
 os_hardening::enable_sysctl_config: true
 os_hardening::disabled_services: ['cupsd']
-os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups']
+os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups*']
 os_hardening::allow_change_user: true
 os_hardening::ignore_users: ['j0sh3rs']
