@@ -64,3 +64,9 @@ sysctl::base::values:
     value: '0'
   # net.ipv4.tcp_conection_control:
   #   value: 'bbr'
+
+os_hardening::enable_sysctl_config: true
+os_hardening::disabled_services: ['cupsd']
+os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups']
+os_hardening::allow_change_user: true
+os_hardening::ignore_users: ['j0sh3rs']

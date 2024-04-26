@@ -14,3 +14,4 @@ mod 'puppet-unattended_upgrades', '8.1.0'
 mod 'thias-sysctl',
   :git => 'https://github.com/Phil-Friderici/puppet-sysctl',
   :ref => 'pdk'
+mod 'hardening-os_hardening', '2.4.0'
