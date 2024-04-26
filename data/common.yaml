@@ -66,6 +66,7 @@ sysctl::base::values:
   #   value: 'bbr'
 
 os_hardening::enable_sysctl_config: true
+os_hardening::enable_ipv4_forwarding: true
 os_hardening::disabled_services: ['cupsd']
 os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups*']
 os_hardening::allow_change_user: true
