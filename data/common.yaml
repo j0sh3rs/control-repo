@@ -32,8 +32,8 @@ sysctl::base::values:
     value: '512'
   fs.inotify.max_user_watches:
     value: '1048576'
-  fs.suid_dumpable:
-    value: '0'
+  # fs.suid_dumpable:
+  #   value: '0'
   kernel.core_pattern:
     value: '|/bin/false'
   kernel.keys.root_maxbytes:
