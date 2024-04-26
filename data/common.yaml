@@ -71,3 +71,4 @@ os_hardening::disabled_services: ['cupsd']
 os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups*']
 os_hardening::allow_change_user: true
 os_hardening::ignore_users: ['j0sh3rs']
+os_hardening::ignore_max_files_warnings: true
