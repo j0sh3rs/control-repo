@@ -8,4 +8,5 @@ class base {
   include base::apt
   include limits
   include sysctl::base
+  include os_hardening
 }

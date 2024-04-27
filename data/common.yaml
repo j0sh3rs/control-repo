@@ -32,8 +32,8 @@ sysctl::base::values:
     value: '512'
   fs.inotify.max_user_watches:
     value: '1048576'
-  fs.suid_dumpable:
-    value: '0'
+  # fs.suid_dumpable:
+  #   value: '0'
   kernel.core_pattern:
     value: '|/bin/false'
   kernel.keys.root_maxbytes:
@@ -46,8 +46,8 @@ sysctl::base::values:
     value: '1'
   net.core.somaxconn:
     value: '65535'
-  net.ipv4.ip_forward:
-    value: '1'
+  # net.ipv4.ip_forward:
+  #   value: '1'
   net.ipv4.ip_local_port_range:
     value: '1024 65000'
   net.ipv4.tcp_fastopen:
@@ -66,7 +66,9 @@ sysctl::base::values:
   #   value: 'bbr'
 
 os_hardening::enable_sysctl_config: true
+os_hardening::enable_ipv4_forwarding: true
 os_hardening::disabled_services: ['cupsd']
-os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups']
+os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups*']
 os_hardening::allow_change_user: true
 os_hardening::ignore_users: ['j0sh3rs']
+os_hardening::ignore_max_files_warnings: true
