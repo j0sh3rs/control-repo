@@ -9,6 +9,7 @@ class base {
   include limits
   include sysctl::base
   include os_hardening
+  include ini_setting
   class {'::puppet_agent':
     package_version => 'latest',
     is_pe           => false,
