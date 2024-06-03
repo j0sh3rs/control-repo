@@ -15,6 +15,6 @@ mod 'thias-sysctl',
   :git => 'https://github.com/Phil-Friderici/puppet-sysctl',
   :ref => 'pdk'
 mod 'hardening-os_hardening', '2.4.0'
-mod 'puppetlabs-puppet_agent', '4.19.0'
+mod 'puppetlabs-puppet_agent', '4.20.1'
 mod 'puppetlabs-inifile', '6.1.1'
 mod 'puppetlabs-facts', '1.4.0'
