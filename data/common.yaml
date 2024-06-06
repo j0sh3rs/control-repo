@@ -62,8 +62,8 @@ sysctl::base::values:
     value: '1'
   vm.panic_on_oom:
     value: '0'
-  # net.ipv4.tcp_conection_control:
-  #   value: 'bbr'
+  net.ipv4.tcp_congestion_control:
+    value: 'bbr'
 
 os_hardening::enable_sysctl_config: true
 os_hardening::enable_ipv4_forwarding: true
