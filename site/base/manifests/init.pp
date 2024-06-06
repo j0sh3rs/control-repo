@@ -6,7 +6,7 @@ class base {
   include sudo
   include base::ntp
   include base::apt
-  include limits
+  # include limits
   include sysctl::base
   include os_hardening
   # class {'puppet_agent':
