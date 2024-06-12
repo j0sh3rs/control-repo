@@ -14,7 +14,7 @@ apt::sources:
   'puppetlabs':
     location: 'http://apt.puppetlabs.com'
     repos: 'puppet8'
-    release: 'jammy'
+    release: 'noble'
     key:
       name: 'puppetlabs.gpg'
       source: 'https://apt.puppetlabs.com/keyring.gpg'
