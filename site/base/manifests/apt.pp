@@ -13,5 +13,6 @@ class base::apt {
     remove_unused_kernel   => true,
     remove_new_unused_deps => true,
     package_ensure         => latest,
+    allow_phased_packages  => true,
   }
 }
