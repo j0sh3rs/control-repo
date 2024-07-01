@@ -10,7 +10,10 @@ mod 'puppetlabs-motd', '7.1.0'
 mod 'puppetlabs-registry', '5.0.1'
 mod 'saz-limits', '4.0.1'
 mod 'saz-ssh', '12.1.0'
-mod 'puppet-unattended_upgrades', '8.1.0'
+#mod 'puppet-unattended_upgrades', '8.1.0'
+mod 'puppet-unattended_upgrades',
+  :git => 'https://github.com/j0sh3rs/puppet-unattended_upgrades',
+  :ref => 'phased_upgrades'
 mod 'thias-sysctl',
   :git => 'https://github.com/Phil-Friderici/puppet-sysctl',
   :ref => 'pdk'
