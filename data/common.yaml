@@ -64,13 +64,13 @@ sysctl::base::values:
     value: '0'
   net.ipv4.tcp_congestion_control:
     value: 'bbr'
-  net.ipv4.tcp_rmem:
-    value: '4096 131072 19200000'
+  # net.ipv4.tcp_rmem:
+  #   value: '4096 131072 30000000'
 
 os_hardening::enable_sysctl_config: true
 os_hardening::enable_ipv4_forwarding: true
-os_hardening::disabled_services: ['cupsd']
-os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups*']
+os_hardening::disabled_services: ['cupsd', 'bluetooth', 'ModemManager', 'wpa_supplicant']
+os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups*', 'kde*', 'ktorrent*', 'plasma*']
 os_hardening::allow_change_user: true
 os_hardening::ignore_users: ['j0sh3rs']
 os_hardening::ignore_max_files_warnings: true
