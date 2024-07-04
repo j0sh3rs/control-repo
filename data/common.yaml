@@ -70,7 +70,7 @@ sysctl::base::values:
 os_hardening::enable_sysctl_config: true
 os_hardening::enable_ipv4_forwarding: true
 os_hardening::disabled_services: ['cupsd', 'bluetooth', 'ModemManager', 'wpa_supplicant']
-os_hardening::unwanted_packages: ['telnet', 'boinc-client', 'cups*', 'kde*', 'ktorrent*', 'plasma*']
+os_hardening::unwanted_packages: ['telnet', 'boinc-client']
 os_hardening::allow_change_user: true
 os_hardening::ignore_users: ['j0sh3rs']
 os_hardening::ignore_max_files_warnings: true
