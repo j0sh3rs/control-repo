@@ -6,6 +6,7 @@ class base {
   include sudo
   include base::ntp
   include base::apt
+  include base::users
   include sysctl::base
   # include inifile
   include os_hardening
