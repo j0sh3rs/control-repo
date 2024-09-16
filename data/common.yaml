@@ -18,6 +18,13 @@ apt::sources:
     key:
       name: 'puppetlabs.gpg'
       source: 'https://apt.puppetlabs.com/keyring.gpg'
+  # 'rocm':
+  #   location: 'https://repo.radeon.com/rocm/apt/5.7.1'
+  #   repos: 'main'
+  #   release: 'noble'
+  #   key:
+  #     name: 'puppetlabs.gpg'
+  #     source: 'https://apt.puppetlabs.com/keyring.gpg'
 
 limits::entries:
   'root/nofile':

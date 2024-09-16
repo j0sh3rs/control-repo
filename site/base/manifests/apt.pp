@@ -15,4 +15,6 @@ class base::apt {
     package_ensure         => latest,
     allow_phased_packages  => true,
   }
+
+  include base::apt::packages
 }
