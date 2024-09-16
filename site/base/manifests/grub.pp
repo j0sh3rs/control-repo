@@ -2,5 +2,5 @@
 #
 #
 class base::grub {
-  include base::grub::kernel_mods
+  # include base::grub::kernel_mods
 }
