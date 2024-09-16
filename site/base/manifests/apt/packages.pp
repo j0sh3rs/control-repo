@@ -32,11 +32,11 @@ class base::apt::packages {
     'linux-tools-generic',
     'linux-cloud-tools-generic',
     'nfs-common',
-    'open-isci',
+    'open-iscsi',
     'nvme-cli',
     'ripgrep',
-    'rust-lldb',
-    'rustc'
+    # 'rust-lldb',
+    # 'rustc'
   ]
 
   stdlib::ensure_packages($install_packages, { 'ensure' => 'latest'})
