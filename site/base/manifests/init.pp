@@ -7,6 +7,7 @@ class base {
   include base::ntp
   include base::apt
   include base::users
+  include base::grub
   include sysctl::base
   # include inifile
   include os_hardening
