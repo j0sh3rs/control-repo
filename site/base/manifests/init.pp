@@ -8,6 +8,7 @@ class base {
   include base::apt
   include base::users
   include base::grub
+  include base::shell
   include sysctl::base
   # include inifile
   include os_hardening
