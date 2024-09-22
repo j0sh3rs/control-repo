@@ -82,19 +82,19 @@ os_hardening::allow_change_user: true
 os_hardening::ignore_users: ['j0sh3rs']
 os_hardening::ignore_max_files_warnings: true
 
-# systemd::manage_units:
-#   trim.service:
-#     unit_entry:
-#       Description: "TRIM Disks"
-#     service_entry:
-#       Type: 'oneshot'
-#       ExecStart: '/usr/bin/fstrim --all'
-#   trim.timer:
-#     unit_entry:
-#       Description: 'Run Trim Weekly'
-#     timer_entry:
-#       OnCalendar: 'weekly'
-#       AccuracySec: '1h'
-#       Persistent: true
-#     install_entry:
-#       WantedBy: 'timers.target'
+systemd::manage_units:
+  puppet-agent.service:
+    unit_entry:
+      Description: "Run Puppet Agent"
+    service_entry:
+      Type: 'oneshot'
+      ExecStart: '/opt/puppetlabs/bin/puppet agent --onetime --no-daemonize --no-usecacheonfailure'
+  puppet-agent.timer:
+    unit_entry:
+      Description: 'Run Puppet Hourly'
+    timer_entry:
+      OnCalendar: 'hourly'
+      AccuracySec: '5m'
+      Persistent: true
+    install_entry:
+      WantedBy: 'timers.target'

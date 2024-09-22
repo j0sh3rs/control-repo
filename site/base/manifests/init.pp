@@ -10,11 +10,5 @@ class base {
   include base::grub
   include base::shell
   include sysctl::base
-  # include inifile
   include os_hardening
-  # class {'puppet_agent':
-  #   package_version => 'latest',
-  #   is_pe           => false,
-  #   collection      => 'puppet8'
-  # }
 }
