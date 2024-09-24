@@ -56,4 +56,10 @@ class base::apt::packages {
     user        => 'j0sh3rs',
     group       => 'j0sh3rs'
   }
+
+  exec { 'install flux':
+    path        => ['/usr/bin'],
+    command     => "curl -s https://fluxcd.io/install.sh | bash",
+    creates     => '/usr/local/bin/flux'
+  }
 }
