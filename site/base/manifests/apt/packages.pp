@@ -34,10 +34,26 @@ class base::apt::packages {
     'nfs-common',
     'open-iscsi',
     'nvme-cli',
-    'ripgrep',
-    # 'rust-lldb',
-    # 'rustc'
+    'rbenv',
+    'ripgrep'
   ]
 
   stdlib::ensure_packages($install_packages, { 'ensure' => 'latest'})
+
+  exec { 'install rust':
+    path    => ['/usr/bin'],
+    command => "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -q -y",
+    creates => '/home/j0sh3rs/.cargo/bin/cargo',
+    user    => 'j0sh3rs',
+    group   => 'j0sh3rs'
+  }
+
+  exec { 'install atuin':
+    path        => ['/usr/bin'],
+    command     => "curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh/ | sh -s -- -q",
+    creates     => '/home/j0sh3rs/.atuin/bin/atuin',
+    environment => ['HOME=/home/j0sh3rs'],
+    user        => 'j0sh3rs',
+    group       => 'j0sh3rs'
+  }
 }
