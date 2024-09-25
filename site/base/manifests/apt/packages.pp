@@ -40,13 +40,13 @@ class base::apt::packages {
 
   stdlib::ensure_packages($install_packages, { 'ensure' => 'latest'})
 
-  exec { 'install rust':
-    path    => ['/usr/bin'],
-    command => "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -q -y",
-    creates => '/home/j0sh3rs/.cargo/bin/cargo',
-    user    => 'j0sh3rs',
-    group   => 'j0sh3rs'
-  }
+  # exec { 'install rust':
+  #   path    => ['/usr/bin'],
+  #   command => "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -q -y",
+  #   creates => '/home/j0sh3rs/.cargo/bin/cargo',
+  #   user    => 'j0sh3rs',
+  #   group   => 'j0sh3rs'
+  # }
 
   exec { 'install atuin':
     path        => ['/usr/bin'],

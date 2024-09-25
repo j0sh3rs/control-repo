@@ -3,12 +3,13 @@
 # @example Basic Usage
 # include base::limits
 class base {
-  include sudo
-  include base::ntp
   include base::apt
-  include base::users
   include base::grub
+  include base::ntp
+  include base::rust
   include base::shell
-  include sysctl::base
+  include base::users
   include os_hardening
+  include sudo
+  include sysctl::base
 }
