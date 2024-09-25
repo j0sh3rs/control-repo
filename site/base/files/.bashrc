@@ -108,8 +108,8 @@ if ! shopt -oq posix; then
   fi
 fi
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-eval "$(atuin init bash)"
-eval "$(~/.rbenv/bin/rbenv init - bash)"
+eval "$(/home/j0sh3rs/.atuin/bin/atuin init bash)"
+# eval "$(~/.rbenv/bin/rbenv init - bash)"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias k='kubectl'
