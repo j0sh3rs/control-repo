@@ -19,7 +19,7 @@ mod 'thias-sysctl',
   :ref => 'pdk'
 mod 'hardening-os_hardening', '2.4.0'
 mod 'puppetlabs-puppet_agent', '4.21.0'
-mod 'puppetlabs-inifile', '6.1.1'
+mod 'puppetlabs-inifile', '6.2.0'
 mod 'puppetlabs-facts', '1.6.0'
 mod 'puppetlabs-sshkeys_core', '2.5.0'
 mod 'puppet-systemd', '7.1.0'
